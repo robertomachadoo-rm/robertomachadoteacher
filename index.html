@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas Particulares de Inglês | Destrave sua Conversação</title>
+    <!-- Importação da Fonte Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================
+           PALETA 2: ORGANIC & FRIENDLY (CSS VARIABLES)
+           ========================================== */
+        :root {
+            --bg-color: #FAF6F0;       /* Creme Aconchegante (60%) */
+            --text-main: #1E3A2F;      /* Verde Floresta Profundo (30%) */
+            --accent-sage: #A3B19B;    /* Verde Sálvia (Elementos) */
+            --cta-color: #E07A5F;      /* Terracota/Coral (10% - Botões) */
+            --cta-hover: #c9654b;
+            --white: #ffffff;
+        }
+
+        /* Configurações Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Menu / Header */
+        header {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.7;
+        }
+
+        /* Seção Hero (Dobra Inicial) */
+        .hero {
+            padding: 60px 0 100px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        /* Placeholder para a foto do professor */
+        .hero-image-area {
+            background-color: var(--accent-sage);
+            border-radius: 20px;
+            height: 480px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(30, 58, 47, 0.1);
+            position: relative;
+        }
+
+        .hero-image-area span {
+            color: var(--text-main);
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Se você tiver sua foto em arquivo, descomente a tag img abaixo e delete o span acima */
+        .hero-image-area img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 35px;
+            opacity: 0.9;
+        }
+
+        /* Botão de Conversão Inteligente */
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--cta-color);
+            color: var(--white);
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 5px 15px rgba(224, 122, 95, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--cta-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(224, 122, 95, 0.4);
+        }
+
+        /* Características / Diferenciais */
+        .features {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .feature-icon {
+            color: var(--cta-color);
+            font-size: 1.2rem;
+        }
+
+        /* Responsividade para Celulares */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 30px 0 60px 0;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-image-area {
+                height: 350px;
+                order: 2; /* Foto vai para baixo no celular para priorizar o texto e botão */
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- CABEÇALHO -->
+        <header>
+            <div class="logo">Teacher English</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#metodologia">Metodologia</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- SEÇÃO PRINCIPAL (HERO) -->
+        <main class="hero">
+            <div class="hero-grid">
+                
+                <!-- Lado Esquerdo: Imagem do Professor -->
+                <div class="hero-image-area">
+                    <!-- Substitua o atributo src abaixo pelo link ou caminho da sua foto real profissional -->
+                    <img src="https://unsplash.com" alt="Foto do Professor de Inglês">
+                </div>
+
+                <!-- Lado Direito: Conteúdo e Texto Persuasivo -->
+                <div class="hero-content">
+                    <h1>Destrave seu Inglês sem Medo</h1>
+                    <p>Aulas particulares ao vivo, 100% personalizadas para os seus objetivos. Fale com confiança desde a primeira sessão em um ambiente seguro e acolhedor.</p>
+                    
+                    <!-- Substitua o '#' pelo seu link real do Calendly ou WhatsApp -->
+                    <a href="#" class="btn-cta" target="_blank">Agendar Aula Experimental Gratuita</a>
+
+                    <!-- Benefícios Rápidos de Apoio -->
+                    <div class="features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span> Foco Total em Conversação Prática
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span> Flexibilidade de Horários e Agenda
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span> Cronograma Adaptado ao seu Ritmo
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
